@@ -1,0 +1,95 @@
+.about {
+  width: 100%;
+  background: #fff;
+  padding: 6rem 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.about__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.about__inner .profile {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.about__inner .profile__title {
+  -webkit-transform: translate(4rem, 0);
+          transform: translate(4rem, 0);
+  font-size: 3rem;
+  letter-spacing: -0.25rem;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.about__inner .profile__title b {
+  font-weight: 900;
+}
+
+.about__inner .profile__img {
+  width: 20rem;
+  height: 15rem;
+  background: url("/src/images/img_profile.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  border: 2px solid #000;
+}
+
+.about__inner .profile__img .blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.about__inner .profile__img::after {
+  content: "";
+  display: block;
+  border: 2px solid #777;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(9px, -15px);
+          transform: translate(9px, -15px);
+}
+
+.about__inner .profile-list {
+  padding-top: 2rem;
+}
+
+.about__inner .profile-list__item {
+  line-height: 1.5rem;
+  padding-right: 0.3rem;
+}
+
+.about__inner .profile-list .name-kr {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.about__inner .profile-list .name-en {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #999;
+}
+
+.about__inner .profile-list .item-job {
+  font-weight: 700;
+  color: #666;
+  text-decoration: underline;
+}
+
+.about__inner .about-text {
+  text-align: right;
+}
+
+.about__inner .about-text__item {
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  word-break: keep-all;
+}

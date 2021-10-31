@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  .footer-link {
+    &__item {
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.works {
+  width: 100vw;
+  padding: 6rem 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.works__title {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 3.2rem;
+  letter-spacing: -0.25rem;
+}
+
+.works__title b {
+  font-weight: 900;
+}
+
+.works__shadow-title {
+  position: absolute;
+  top: 0;
+  margin-top: 1.8rem;
+  left: 1rem;
+  width: 100%;
+  text-align: left;
+  font-family: "Muli", sans-serif;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-size: 6.2rem;
+  line-height: 1;
+  color: black;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.85)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.works .works-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.works .works-list__item {
+  width: calc(100% / 2 - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.works .works-list__item .item__link {
+  width: 100%;
+  height: 20vh;
+  display: block;
+}
+
+.works .works-list__item .item__link img {
+  width: 100%;
+  height: 100%;
+}
+
+.works .works-list__item .item__name {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+
+.works .works-list__item .item__skill {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.works .works-list__item:nth-of-type(even) {
+  margin-top: 3rem;
+}

@@ -1,59 +1,18 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-* {
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
-}
-$main-color: #79b4b7;
-$second-color: #f8f0df;
-$third-color: #9d9d9d;
-$black-color: #000;
-$white-color: #fff;
+// 기본
+@import "base/reset.scss";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-.loading--hide {
-  opacity: 0;
-  visibility: hidden;
-  transition-delay: 0.4s;
-}
-.loading {
-  opacity: 1;
-  visibility: visible;
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  height: 100vh;
-  background: $main-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  pointer-events: none;
-  transition: all 1.1s;
-  &__loader {
-    height: 10rem;
-    width: 10rem;
-    text-align: center;
-    padding: 1rem;
-    margin: 0 auto 0.2rem;
-    display: inline-block;
-    vertical-align: top;
-    svg {
-      height: 10rem;
-      width: 10rem;
-    }
-  }
-  &__text {
-    font-size: 1.2rem;
-    font-weight: 100;
-    color: $white-color;
-  }
-}
+// 폰트
+@import "base/font.scss";
 
-svg path,
-svg rect {
-  fill: $white-color;
-}
+// 컬러
+@import "helper/variable.scss";
+// 모듈
+// 레이아웃
+@import "content/loading.scss";
+@import "content/header.scss";
+@import "content/visual.scss";
+@import "content/about.scss";
+@import "content/skills.scss";
+@import "content/work.scss";
+@import "content/contact.scss";
+@import "content/footer.scss";
