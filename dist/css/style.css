@@ -431,7 +431,7 @@ button {
 .about__inner .profile__img {
   width: 20rem;
   height: 15rem;
-  background: url("../../images/img_profile.png") no-repeat center;
+  background: url("./src/images/img_hoteliv_renewal.png") no-repeat center;
   background-size: cover;
   position: relative;
   border: 2px solid #000;
