@@ -115,10 +115,14 @@
     opacity: 1;
     transform: translateY(0);
   }
-  @for $i from 1 through 8 {
+  @for $i from 1 through 7 {
     .works-list__item:nth-child(#{$i}) {
       transition-delay: $i * 0.2s;
     }
+  }
+  .works-list__item:nth-child(7) {
+    margin: auto 0;
+    margin-left: 1rem;
   }
 }
 
@@ -138,6 +142,13 @@
       font-size: 2.2rem;
       word-break: keep-all;
     }
+  }
+}
+
+@include mobile-2 {
+  .works .works-list__item .item__name {
+    font-size: 0.9rem;
+    word-break: keep-all;
   }
 }
 
