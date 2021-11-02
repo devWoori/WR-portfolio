@@ -1,10 +1,11 @@
 @charset "utf-8";
+@import "../helper/mediaquery.scss";
 
 .skills {
-  padding: 6rem 3rem;
+  padding: 10rem 3rem;
   &__inner {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -14,16 +15,21 @@
       &__item {
         position: relative;
         padding: 0 0 2rem 2rem;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: transform 0.6s ease, opacity 0.6s ease;
         .item__name {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 700;
         }
         .item__detail {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          line-height: 1.4rem;
           word-break: keep-all;
           padding-top: 1rem;
         }
       }
+
       &__item::before {
         content: "✔︎";
         display: inline-block;
@@ -31,19 +37,69 @@
         transform: translate(-24px, 0);
       }
     }
+    .skills-list.active {
+      .skills-list__item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @for $i from 1 through 5 {
+        .skills-list__item:nth-child(#{$i}) {
+          transition-delay: $i * 0.2s;
+        }
+      }
+    }
   }
 
   &__title {
     font-size: 3rem;
     letter-spacing: -0.25rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
     b {
       font-weight: 900;
     }
   }
+  &__inner.active {
+    .skills__title {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   &__icon {
     width: 2rem;
     height: 2rem;
     animation: bounce 1.3s infinite;
+  }
+}
+
+@include desktop {
+  .skills {
+    padding: 10rem 1rem;
+    &__inner {
+      flex-direction: column;
+    }
+    &__title {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+@include tablet {
+  .skills__title {
+    font-size: 2.2rem;
+  }
+  .skills__inner {
+    .skills-list__item {
+      .item__name {
+        font-size: 1.2rem;
+      }
+      .item__detail {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
   }
 }
 

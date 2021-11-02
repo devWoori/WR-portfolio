@@ -1,16 +1,42 @@
 @charset "utf-8";
+@import "../helper/mediaquery.scss";
 
-footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem 3rem;
   box-sizing: border-box;
-  .footer-link {
+  &-link {
     &__item {
       color: #000;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  &__copyright {
+    color: #999;
+  }
+}
+
+@include tablet {
+  .footer {
+    padding: 1rem;
+    flex-direction: column;
+    &-link {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include mobile-2 {
+  .footer {
+    .footer-link__item,
+    .footer__copyright {
+      font-size: 0.9rem;
     }
   }
 }

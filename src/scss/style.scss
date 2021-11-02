@@ -1,12 +1,9 @@
-// 기본
-@import "base/reset.scss";
-
 // 폰트
 @import "base/font.scss";
-
-// 컬러
+// 기본
+@import "base/reset.scss";
+// 변수
 @import "helper/variable.scss";
-// 모듈
 // 레이아웃
 @import "content/loading.scss";
 @import "content/header.scss";

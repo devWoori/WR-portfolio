@@ -1,318 +1,68 @@
 @charset "utf-8";
+@import "../helper/mediaquery.scss";
 
 .visual {
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
   padding: 3rem;
   box-sizing: border-box;
   text-align: right;
-  &-text {
-    width: 65%;
-    .svg_text {
-      opacity: 0;
-      width: 100%;
-      margin: auto;
-      #WEBPUBLISHERCHAWOORI {
-        stroke-dasharray: 10063px;
-        stroke-dashoffset: 10063px;
-        animation: dash 100s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 640px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .visual-text {
+      width: 65%;
+      .svg_text {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2rem;
+        #WEBPUBLISHERCHAWOORI {
+          stroke-dasharray: 10063px;
+          stroke-dashoffset: 10063px;
+          animation: dash 100s ease forwards;
+        }
+      }
+      &__word {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
       }
     }
-    .visual-text__word {
-      opacity: 0;
-      transform: translate(-1rem, 0);
-      font-size: 1.3rem;
-      line-height: 1.8rem;
+  }
+  canvas {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+  }
+}
+
+@include tablet {
+  .visual {
+    padding: 1rem;
+    &__inner {
+      .visual-text {
+        width: 100%;
+        &__word {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+    canvas {
+      height: 60vh;
     }
   }
 }
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-/* H Animation */
-
-// .H-left-stroke {
-//   stroke-dasharray: 124px;
-//   stroke-dashoffset: 124px;
-//   animation: H-left-move 20s ease infinite;
-// }
-
-// .H-mid-stroke {
-//   stroke-dasharray: 37px;
-//   stroke-dashoffset: 37px;
-//   animation: H-mid-move 9s ease forwards;
-// }
-
-// .H-right-stroke {
-//   stroke-dasharray: 124px;
-//   stroke-dashoffset: 124px;
-//   animation: H-right-move 13s ease forwards;
-// }
-
-@keyframes H-left-move {
-  0% {
-    stroke-dashoffset: 10053px;
-  }
-  5% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes H-mid-move {
-  0% {
-    stroke-dashoffset: 37px;
-  }
-  5% {
-    stroke-dashoffset: 37px;
-  }
-  10% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes H-right-move {
-  0% {
-    stroke-dashoffset: 124px;
-  }
-  5% {
-    stroke-dashoffset: 124px;
-  }
-  10% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-/* E Animation */
-
-.E-left-stroke {
-  stroke-dasharray: 124px;
-  stroke-dashoffset: 124px;
-  animation: E-left-move 20s ease forwards;
-}
-
-.E-top-stroke {
-  stroke-dasharray: 47px;
-  stroke-dashoffset: 47px;
-  animation: E-top-move 10s ease forwards;
-}
-
-.E-mid-stroke {
-  stroke-dasharray: 42px;
-  stroke-dashoffset: 42px;
-  animation: E-mid-move 10s ease forwards;
-}
-
-.E-bottom-stroke {
-  stroke-dasharray: 47px;
-  stroke-dashoffset: 47px;
-  animation: E-bottom-move 10s ease forwards;
-}
-
-@keyframes E-left-move {
-  0% {
-    stroke-dashoffset: 124px;
-  }
-  2% {
-    stroke-dashoffset: 124px;
-  }
-  6% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes E-top-move {
-  0% {
-    stroke-dashoffset: 47px;
-  }
-  6% {
-    stroke-dashoffset: 47px;
-  }
-  11% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes E-mid-move {
-  0% {
-    stroke-dashoffset: 42px;
-  }
-  8% {
-    stroke-dashoffset: 42px;
-  }
-  13% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes E-bottom-move {
-  0% {
-    stroke-dashoffset: 47px;
-  }
-  11% {
-    stroke-dashoffset: 47px;
-  }
-  16% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-/* L One Animation */
-
-.L-one-long-stroke {
-  stroke-dasharray: 124px;
-  stroke-dashoffset: 124px;
-  animation: L-one-long-move 20s ease forwards;
-}
-
-.L-one-short-stroke {
-  stroke-dasharray: 44px;
-  stroke-dashoffset: 44px;
-  animation: L-one-short-move 10s ease forwards;
-}
-
-@keyframes L-one-long-move {
-  0% {
-    stroke-dashoffset: 124px;
-  }
-  2% {
-    stroke-dashoffset: 124px;
-  }
-  7% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes L-one-short-move {
-  0% {
-    stroke-dashoffset: 44px;
-  }
-  13% {
-    stroke-dashoffset: 44px;
-  }
-  18% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-/* L Two Animation */
-
-.L-two-long-stroke {
-  stroke-dasharray: 124px;
-  stroke-dashoffset: 124px;
-  animation: L-two-long-move 20s ease forwards;
-}
-
-.L-two-short-stroke {
-  stroke-dasharray: 44px;
-  stroke-dashoffset: 44px;
-  animation: L-two-short-move 10s ease forwards;
-}
-
-@keyframes L-two-long-move {
-  0% {
-    stroke-dashoffset: 124px;
-  }
-  3% {
-    stroke-dashoffset: 124px;
-  }
-  8% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-@keyframes L-two-short-move {
-  0% {
-    stroke-dashoffset: 44px;
-  }
-  15% {
-    stroke-dashoffset: 44px;
-  }
-  20% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-/* O Animation */
-
-.O-stroke {
-  stroke-dasharray: 302px;
-  stroke-dashoffset: 302px;
-  animation: O-move 20s ease forwards;
-}
-
-@keyframes O-move {
-  0% {
-    stroke-dashoffset: 302px;
-  }
-  4% {
-    stroke-dashoffset: 302px;
-  }
-  9% {
-    stroke-dashoffset: 0px;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-  }
-}
-
-/* Red Dot Animation */
-
-.red-dot {
-  stroke-width: 44px;
-  stroke-linecap: round;
-  animation: red-dot-grow 8s ease-out forwards;
-}
-
-@keyframes red-dot-grow {
-  0% {
-    stroke-width: 0px;
-  }
-  15% {
-    stroke-width: 0px;
-  }
-  20% {
-    stroke-width: 44px;
-  }
-  100% {
-    stroke-width: 44px;
-  }
+.visual.fixed {
+  z-index: -99;
+  position: fixed !important;
 }

@@ -1,21 +1,25 @@
 @charset "utf-8";
+@import "../helper/mediaquery.scss";
 
 .about {
   width: 100%;
-  background: #fff;
   padding: 6rem 3rem;
   box-sizing: border-box;
   &__inner {
-    max-width: 1300px;
+    position: relative;
+    max-width: 1000px;
     margin: 0 auto;
     .profile {
       position: relative;
       padding-bottom: 2rem;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.6s linear;
       &__title {
+        display: inline-block;
         transform: translate(4rem, 0);
         font-size: 3rem;
         letter-spacing: -0.25rem;
-        background: #fff;
         position: relative;
         z-index: 10;
         b {
@@ -73,8 +77,81 @@
       text-align: right;
       &__item {
         padding-top: 2rem;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
         word-break: keep-all;
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+      }
+    }
+    .about-text.active {
+      .about-text__item {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @for $i from 1 through 5 {
+        .about-text__item:nth-child(#{$i}) {
+          transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+  &__shadow-title {
+    position: absolute;
+    top: 0;
+    margin-top: 1.8rem;
+    left: 1rem;
+    width: 100%;
+    text-align: left;
+    font-family: "Muli", sans-serif;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    font-size: 6.2rem;
+    line-height: 1;
+    color: rgba(85, 85, 85, 1);
+    background: linear-gradient(
+      90deg,
+      rgba(85, 85, 85, 1),
+      rgba(85, 85, 85, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.6s ease;
+  }
+
+  &__inner.active {
+    .profile {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .about__shadow-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    padding: 6rem 1rem;
+    .profile {
+      &__title {
+        font-size: 2rem;
+      }
+      &__img {
+        width: 17rem;
+        height: 12rem;
+      }
+    }
+    .about-text {
+      &__item {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        padding-top: 1.5rem;
       }
     }
   }

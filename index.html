@@ -62,6 +62,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="dist/css/style.css?ver=211027" />
     <script defer src="src/js/app.js"></script>
+    <script defer type="module" src="src/js/glowBg.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -158,8 +159,6 @@
               <svg
                 class="svg_text"
                 xmlns="http://www.w3.org/2000/svg"
-                width="1007"
-                height="275"
                 viewBox="0 0 1007 275"
                 fill="none"
               >
@@ -169,209 +168,207 @@
                   fill="black"
                 />
               </svg>
-              <p class="visual-text__word">
-                다양한 경험으로 소통하는 웹 퍼블리셔
-              </p>
-              <p class="visual-text__word">차우리 입니다.</p>
+              <p class="visual-text__word">다양한 경험과 능동적인 자세로</p>
+              <p class="visual-text__word">소통하는 웹퍼블리셔 차우리 입니다.</p>
             </div>
           </div>
-          <div class="visual__img"></div>
         </section>
-        <section class="about">
-          <div class="about__inner">
-            <div class="profile">
-              <h2 class="profile__title">저는 이런 <b>퍼블리셔</b>입니다</h2>
-              <div class="profile__img">
-                <span class="blind">프로필</span>
+        <div class="content">
+          <section class="about">
+            <div class="about__inner">
+              <div class="profile">
+                <h2 class="profile__title">저는 이런 <b>퍼블리셔</b>입니다</h2>
+                <div class="profile__img">
+                  <span class="blind">프로필</span>
+                </div>
+                <div class="profile-list">
+                  <span class="profile-list__item name-kr">차우리</span>
+                  <span class="profile-list__item name-en">Cha Woori</span>
+                  <p class="profile-list__item item-job">Web Publisher</p>
+                </div>
               </div>
-              <div class="profile-list">
-                <span class="profile-list__item name-kr">차우리</span>
-                <span class="profile-list__item name-en">Cha Woori</span>
-                <p class="profile-list__item item-job">Web Publisher</p>
+              <div class="about__shadow-title">WHO AM I</div>
+              <div class="about-text">
+                <p class="about-text__item">
+                  안녕하세요, 웹퍼블리셔 차우리 입니다.
+                </p>
+                <p class="about-text__item">
+                  탄탄한 구조로 마크업을 구성하고 이를 토대로 반응형, 적응형 웹을 만들며<br/>
+                  다양한 UI animation을 구현하는 데 관심이 많습니다.
+                </p>
+                <p class="about-text__item">
+                  많은 사용자가 더 간편하게 즐기고 이용할 수 있는 웹에 대해 고민하고<br/>
+                  이에 관련된 접근성, 검색 엔진 최적화를 끌어올리는 작업을 지향합니다.<br/>
+                  사용자의 입장에서 생각하면서 웹을 발전시켜 나가고,<br/>
+                  그에 관련된 기술을 쌓는 것 또한 관심이 많습니다.
+                </p>
+                <p class="about-text__item">
+                  저는 저의 일을 좋아하고 잘하고 싶어합니다.<br/>
+                  이에 좋아하는 것을 더 잘할 수 있도록<br/>
+                  지속적으로 관련된 지식을 찾고 습득하여<br/>
+                  실무에 적용하는 힘을 가졌습니다.<br/>
+                </p>
+                <p class="about-text__item">
+                  최고의 결과물은 팀워크에서 온다는 믿음으로<br/>
+                  모두와 함께 "잘" 일하는 방법에 대해 연구합니다.
+                </p>
               </div>
             </div>
-            <div class="about-text">
-              <p class="about-text__item">
-                즐기면서 안녕하세요 안녕하세요 안녕하세요 안녕하세요 즐기면서
-                안녕하세요 안녕하세요 안녕하세요 안녕하세요 즐기면서 안녕하세요
-                안녕하세요 안녕하세요 안녕하세요
-              </p>
-              <p class="about-text__item">
-                안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 즐기면서
-                안녕하세요 안녕하세요 안녕하세요 안녕하세요 즐기면서 안녕하세요
-                안녕하세요 안녕하세요 안녕하세요
-              </p>
-              <p class="about-text__item">
-                즐기면서 안녕하세요 안녕하세요 안녕하세요 안녕하세요 즐기면서
-                안녕하세요 안녕하세요 안녕하세요 안녕하세요
-              </p>
-              <p class="about-text__item">
-                안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요
-              </p>
+          </section>
+          <section class="skills">
+            <div class="skills__inner">
+              <h2 class="skills__title">
+                저는 이런것에<br />
+                <b>강점</b>이 있는 사람입니다
+                <img
+                  class="skills__icon"
+                  src="/src/images/ico_raising-hands.png"
+                  alt="star-stuck icon"
+                />
+              </h2>
+              <ul class="skills-list">
+                <li class="skills-list__item">
+                  <strong class="item__name">마크업</strong>
+                  <p class="item__detail">
+                    시멘틱 태그로 웹 표준, 브라우저 호환성에 맞게 페이지를 제작합니다.<br/>
+                    더 많은 사용자가 이용할 수 있도록 웹 접근성, SEO를 고려한 작업을 지향합니다.</p>
+                </li>
+                <li class="skills-list__item">
+                  <strong class="item__name">UI 개발</strong>
+                  <p class="item__detail">
+                    HTML, CSS, JS를 토대로 다양한 API를 활용해 기능에 알맞게 사용하고<br/>
+                    다양한 UI animation을 구현하며 이에 관련된 지식을 주도적으로 찾아 활용합니다.
+                  </p>
+                </li>
+                <li class="skills-list__item">
+                  <strong class="item__name">협업에 대한 이해</strong>
+                  <p class="item__detail">
+                    디자이너의 1px차이, 개발자의 유지보수성을 고려한 개발에 대해 잘 이해하고 있으며<br/>
+                    이를 고려하여 작업하며 모두와 '함께' 일하는 방법을 생각하고 고민합니다.
+                  </p>
+                </li>
+                <li class="skills-list__item">
+                  <strong class="item__name">다양한 경험과 스킬</strong>
+                  <p class="item__detail">
+                    마크업 언어는 물론 java, mysql을 이해하고 있으며<br/>
+                    협업을 위한 git, Zeplin, Figma, Photoshop 등의 툴을 다루고<br/>
+                    업무에 필요한 스킬을 지속적으로 배워나가고 있습니다.
+                  </p>
+                </li>
+                <li class="skills-list__item">
+                  <strong class="item__name">UI/UX 관점의 작업</strong>
+                  <p class="item__detail">
+                    사용자 인터페이스, 사용자 경험의 관점에서 웹을 바라보고<br/>
+                    그 관점에서 내용을 개선하고 추가해 나갈 수 있는 역량을 가졌습니다.
+                  </p>
+                </li>
             </div>
-          </div>
-        </section>
-        <section class="skills">
-          <div class="skills__inner">
-            <h2 class="skills__title">
-              저는 이런것에<br />
-              <b>강점</b>이 있는 사람입니다
-              <img
-                class="skills__icon"
-                src="/src/images/ico_raising-hands.png"
-                alt="star-stuck icon"
-              />
-            </h2>
-            <ul class="skills-list">
-              <li class="skills-list__item">
-                <strong class="item__name">스킬1</strong>
-                <p class="item__detail">이런 것을 잘 다룹니다.</p>
-              </li>
-              <li class="skills-list__item">
-                <strong class="item__name">스킬1</strong>
-                <p class="item__detail">이런 것을 잘 다룹니다.</p>
-              </li>
-              <li class="skills-list__item">
-                <strong class="item__name">스킬1</strong>
-                <p class="item__detail">이런 것을 잘 다룹니다.</p>
-              </li>
-              <li class="skills-list__item">
-                <strong class="item__name">스킬1</strong>
-                <p class="item__detail">이런 것을 잘 다룹니다.</p>
-              </li>
-              <li class="skills-list__item">
-                <strong class="item__name">스킬1</strong>
-                <p class="item__detail">이런 것을 잘 다룹니다.</p>
-              </li>
-          </div>
-          </ul>
-        </section>
-        <section class="works">
-          <div class="works__inner">
-            <h2 class="works__title">이런 <b>작업물</b>을 진행해왔습니다.</h2>
-            <div class="works__shadow-title">WORKS</div>
-            <ul class="works-list">
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">호텔리브 리뉴얼</p>
-                <span class="item__skill">#반응형</span>
-                <span class="item__skill">#SEO</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">호텔리브</p>
-                <span class="item__skill">#반응형</span>
-                <span class="item__skill">#예약시스템</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">호텔리브 어드민</p>
-                <span class="item__skill">#어드민</span>
-                <span class="item__skill">#Bootstrap</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">방그래</p>
-                <span class="item__skill">#적응형</span>
-                <span class="item__skill">#부동산</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">패브릭스퀘어</p>
-                <span class="item__skill">#쇼핑몰</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">셀렉온</p>
-                <span class="item__skill">#쇼핑몰</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">우마켓</p>
-                <span class="item__skill">#적응형</span>
-                <span class="item__skill">#쇼핑몰</span>
-              </li>
-              <li class="works-list__item">
-                <a href="" class="item__link">
-                  <picture>
-                    <source media="(min-width: 700px)" srcset="" />
-                    <source media="(min-width: 400px)" srcset="" />
-                    <img src="" alt="Hoteliv portfolio" />
-                  </picture>
-                </a>
-                <p class="item__name">이음샵 쇼핑몰 기본 디자인</p>
-                <span class="item__skill">#적응형</span>
-                <span class="item__skill">#쇼핑몰</span>
-              </li>
             </ul>
-          </div>
-        </section>
-        <section class="contact">
-          <h2 class="contact__title">CONTACT ME</h2>
-          <div class="contact-info">
-            <p class="contact-info__text">저와 함께 일하고 싶으시다면</p>
-            <a
-              class="contact-info__email"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=woori1373@gmail.com"
-              >woori1373@gmail.com</a
-            >
-          </div>
-        </section>
-        <footer>
-          <p class="footer-link">
-            <a href="" class="footer-link__item">Github</a>
-          </p>
-          <address class="footer__copyright">
-            &copy; WR Portfolio All Right Reserved.
-          </address>
-        </footer>
+          </section>
+          <section class="works">
+            <div class="works__inner">
+              <h2 class="works__title">이런 <b>작업물</b>을 진행해왔습니다.</h2>
+              <div class="works__shadow-title">WORKS</div>
+              <ul class="works-list">
+                <li class="works-list__item">
+                  <a href="https://hoteliv.kr" target="_blank" class="item__link">
+                    <picture>
+                      <source media="(min-width: 700px)" srcset="" />
+                      <source media="(min-width: 400px)" srcset="" />
+                      <img src="/src/images/img_hoteliv_renewal.png" alt="Hoteliv portfolio" />
+                    </picture>
+                  </a>
+                  <p class="item__name">호텔리브 리뉴얼</p>
+                  <span class="item__skill">#반응형</span>
+                  <span class="item__skill">#SEO</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="https://lovely-spruce-c79.notion.site/d89f20ca75f048fc8fad696fa6f93125" target="_blank" class="item__link">
+                    <img src="/src/images/img_hoteliv.png" alt="Hoteliv portfolio" />
+                  </a>
+                  <p class="item__name">호텔리브</p>
+                  <span class="item__skill">#반응형</span>
+                  <span class="item__skill">#예약시스템</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="https://lovely-spruce-c79.notion.site/291fb2518e91411383956dcec139abc2" target="_blank" class="item__link">
+                    <img src="/src/images/img_hoteliv_admin.png" alt="Hoteliv portfolio" />
+                  </a>
+                  <p class="item__name">호텔리브 어드민</p>
+                  <span class="item__skill">#어드민</span>
+                  <span class="item__skill">#Bootstrap</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="https://banggrae.com/map/index" target="_blank" class="item__link">
+                    <picture>
+                      <source media="(min-width: 700px)" srcset="" />
+                      <source media="(min-width: 400px)" srcset="" />
+                      <img src="/src/images/img_banggrae.png" alt="Hoteliv portfolio" />
+                    </picture>
+                  </a>
+                  <p class="item__name">방그래</p>
+                  <span class="item__skill">#적응형</span>
+                  <span class="item__skill">#부동산</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="http://eumdesign.eumshop.com/" target="_blank" class="item__link">
+                    <picture>
+                      <source media="(min-width: 700px)" srcset="" />
+                      <source media="(min-width: 400px)" srcset="" />
+                      <img src="/src/images/img_eumshop.png" alt="Hoteliv portfolio" />
+                    </picture>
+                  </a>
+                  <p class="item__name">이음샵 쇼핑몰 기본 디자인</p>
+                  <span class="item__skill">#적응형</span>
+                  <span class="item__skill">#쇼핑몰</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="" class="item__link">
+                      <img src="/src/images/img_selecon.png" alt="Hoteliv portfolio" />
+                    </picture>
+                  </a>
+                  <p class="item__name">셀렉온</p>
+                  <span class="item__skill">#적응형</span>
+                  <span class="item__skill">#쇼핑몰</span>
+                </li>
+                <li class="works-list__item">
+                  <a href="https://lovely-spruce-c79.notion.site/26fb85b21b654e4499477e4efac2115c" target="_blank" class="item__link">
+                    <img src="/src/images/img_fabrixquare.png" alt="Hoteliv portfolio" />
+                  </a>
+                  <p class="item__name">패브릭스퀘어</p>
+                  <span class="item__skill">#쇼핑몰</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="contact">
+            <h2 class="contact__title">CONTACT ME</h2>
+            <div class="contact-info">
+              <p class="contact-info__item contact-info__text">능동적인 자세로 일하는 사람을 찾으신다면,</p>
+              <p class="contact-info__item contact-info__text">배움에 주저가 없는 사람을 찾으신다면,</p>
+              <p class="contact-info__item contact-info__text">저와 함께 해주세요!</p>
+              <a
+                class="contact-info__item contact-info__email"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=woori1373@gmail.com"
+                target="_blank"
+                >
+                woori1373@gmail.com
+              </a>
+            </div>
+          </section>
+          <footer class="footer">
+            <p class="footer-link">
+              <a href="" class="footer-link__item">Github</a>
+            </p>
+            <address class="footer__copyright">
+              &copy; WR Portfolio All Right Reserved.
+            </address>
+          </footer>
+        </div>
       </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
   </body>
 </html>

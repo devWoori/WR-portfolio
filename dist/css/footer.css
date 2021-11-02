@@ -1,4 +1,4 @@
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,12 +9,39 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-footer .footer-link__item {
+.footer-link__item {
   color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-link {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer .footer-link__item,
+  .footer .footer__copyright {
+    font-size: 0.9rem;
+  }
 }

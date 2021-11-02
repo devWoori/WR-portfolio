@@ -1,25 +1,39 @@
 @charset "utf-8";
 
 // Break Point
+$mobile: 320px;
+$mobile-2: 560px;
 $tablet: 768px;
 $laptop: 1020px;
-$desktop: 1400px;
+$desktop: 1300px;
 
 // Mixins
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile-2 {
+  @media (max-width: #{$mobile-2}) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  @media (min-width: #{$tablet}) {
+  @media (max-width: #{$tablet}) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (min-width: #{$laptop}) {
+  @media (max-width: #{$laptop}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (max-width: #{$desktop}) {
     @content;
   }
 }

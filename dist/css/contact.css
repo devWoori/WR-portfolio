@@ -6,38 +6,133 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__title {
   font-size: 6rem;
   font-weight: 900;
-  letter-spacing: -0.25rem;
-  -webkit-transform: translate(18px, 55px);
-          transform: translate(18px, 55px);
+  -webkit-text-stroke: 2px #666;
+  color: transparent;
+  opacity: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease, -webkit-transform 0.6s ease;
 }
 
 .contact .contact-info {
-  width: 70%;
-  padding: 6rem 3rem;
+  width: 100%;
+  padding: 7rem 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #d4d1cc;
+  text-align: center;
+}
+
+.contact .contact-info__item {
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease, -webkit-transform 0.6s ease;
 }
 
 .contact .contact-info__text {
   font-size: 1.5rem;
   color: #666;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.55rem;
   line-height: 1.8rem;
 }
 
 .contact .contact-info__email {
-  font-size: 2.8rem;
+  display: inline-block;
+  font-size: 2.5rem;
   color: #000;
   text-decoration: none;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  cursor: pointer;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.contact.active .contact__title {
+  opacity: 1;
+  -webkit-transform: translateY(55px);
+          transform: translateY(55px);
+}
+
+.contact.active .contact-info__email:hover {
+  color: #fff;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.contact.active .contact-info__item {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.contact.active .contact-info__item:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.contact.active .contact-info__item:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.contact.active .contact-info__item:nth-child(3) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+  .contact__title {
+    font-size: 4rem;
+  }
+  .contact.active .contact__title {
+    -webkit-transform: translateY(34px);
+            transform: translateY(34px);
+  }
+  .contact .contact-info {
+    padding: 7rem 1rem;
+  }
+  .contact .contact-info__text {
+    font-size: 1.1rem;
+  }
+  .contact .contact-info__email {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact__title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .contact.active .contact__title {
+    -webkit-transform: translateY(27px);
+            transform: translateY(27px);
+  }
+  .contact .contact-info {
+    padding: 7rem 1rem;
+  }
+  .contact .contact-info__text {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  .contact .contact-info__email {
+    font-size: 1.3rem;
+  }
 }

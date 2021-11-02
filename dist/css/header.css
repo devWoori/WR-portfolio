@@ -17,13 +17,15 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header__logo {
   width: 8rem;
   padding: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header__logo svg {
@@ -34,15 +36,26 @@
   font-size: 0.8rem;
   font-weight: 200;
   padding-top: 2rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header__inner.scrollOn .header__logo {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .header__inner.scrollOn .header__email {
   padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .header__inner.scrollOn .header__logo {
+    width: 3rem;
+    height: 3rem;
+  }
 }

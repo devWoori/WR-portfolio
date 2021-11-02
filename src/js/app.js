@@ -1,16 +1,10 @@
 // 페이지 로드 시 로딩 화면
-const loading = function () {
-  document.querySelector("body").classList.add("loading--hide");
-};
-window.addEventListener("load", loading);
+// const loading = function () {
+//   document.querySelector("body").classList.add("loading--hide");
+// };
+// window.addEventListener("load", loading);
 
-const myPath = document.querySelector(".svg_text path");
-console.log(Math.floor(myPath.getTotalLength()));
-
-const wrap = document.querySelector(".wrap");
-//const header = document.querySelector(".header__inner");
-const headerLogo = document.querySelector(".header__logo");
-
+// 모바일 유무 확인
 const isMobile = (function (e) {
   return (
     /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
@@ -22,21 +16,160 @@ const isMobile = (function (e) {
   );
 })(navigator.userAgent || navigator.vendor || window.opera);
 
-gsap.registerPlugin(ScrollTrigger);
-let tl = gsap.timeline();
+const wrap = document.querySelector(".wrap");
+const header = document.querySelector(".header__inner");
+const headerLogo = document.querySelector(".header__logo");
 
-tl.to(".svg_text", { duration: 2, opacity: 1 });
-tl.to(".visual-text__word", { opacity: 1 });
+// header 애니메이션
+let detectTop = function () {
+  window.addEventListener("scroll", function () {
+    let scrollLocation = document.documentElement.scrollTop;
+    if (scrollLocation > 0) {
+      header.classList.add("scrollOn");
+    } else {
+      header.classList.remove("scrollOn");
+    }
+  });
+};
+detectTop();
 
-// gsap.to(".svg_text", {
-//   scrollTrigger: {
-//     trigger: headerLogo,
-//     toggleActions: "resume pause reset pause",
-//     markers: true,
-//     start: "top center",
-//   },
-//   opacity: 1,
+// visual 애니메이션
+gsap.fromTo(".header__logo", { opacity: 0, x: -500 }, { opacity: 1, x: 0 });
+gsap.fromTo(".header__email", { opacity: 0, x: 500 }, { opacity: 1, x: 0 });
+
+const visualTl = gsap.timeline();
+visualTl
+  .fromTo(
+    ".svg_text",
+    { opacity: 0, y: -20 },
+    { opacity: 1, y: 0, ease: "easeInOut", delay: 0.5 }
+  )
+  .fromTo(
+    ".visual-text__word",
+    { opacity: 0, y: -20 },
+    { opacity: 1, y: 0, ease: "easeInOut", delay: 0.5 }
+  );
+
+// visual section 고정
+const visual = document.querySelector(".visual");
+let controller = new ScrollMagic.Controller();
+let visualScene = new ScrollMagic.Scene({
+  triggerHook: 0,
+  duration: "20%",
+})
+  .setPin(visual)
+  .on("end", function () {
+    visual.classList.add("fixed");
+  })
+  .addTo(controller);
+
+// background change
+const body = document.querySelector("body");
+let bgChange1 = new ScrollMagic.Scene({
+  triggerElement: ".about",
+  triggerHook: 0.2,
+  duration: 500,
+}).setClassToggle("body", "body-white");
+let bgChange2 = new ScrollMagic.Scene({
+  triggerElement: ".skills",
+  triggerHook: 0.2,
+  duration: 500,
+}).setClassToggle("body", "body-gray");
+
+controller.addScene([bgChange1, bgChange2]);
+controller.scrollTo(function (newpos) {
+  gsap.to(window, 0.5, { y: newpos });
+});
+
+// 요소 애니메이션
+let elementAnimation = function (item) {
+  let items, winH;
+
+  const initModule = function () {
+    if (item.length > 1) {
+      items = document.querySelectorAll(item);
+    } else {
+      items = document.querySelector(item);
+    }
+    winH = window.innerHeight - 100;
+    _addEventHandlers();
+  };
+
+  let _addEventHandlers = function () {
+    window.addEventListener("scroll", _checkPosition);
+    window.addEventListener("load", _checkPosition);
+    window.addEventListener("resize", initModule);
+  };
+
+  let _checkPosition = function () {
+    if (item.length > 1) {
+      for (var i = 0; i < items.length; i++) {
+        let posFromTop = items[i].getBoundingClientRect().top;
+        if (winH > posFromTop) {
+          items[i].classList.add("active");
+        } else {
+          items[i].classList.remove("active");
+        }
+      }
+    } else {
+      items.classList.add("active");
+    }
+  };
+
+  return {
+    init: initModule,
+  };
+};
+
+elementAnimation(".about__inner").init();
+elementAnimation(".about-text").init();
+elementAnimation(".skills__inner").init();
+elementAnimation(".skills-list").init();
+elementAnimation(".works__inner").init();
+elementAnimation(".works-list").init();
+elementAnimation(".contact").init();
+elementAnimation(".contact-info").init();
+elementAnimation(".contact-info_email").init();
+
+// function detectTop() {
+//   const body = document.querySelector("body");
+//   let bodyTop = body.getBoundingClientRect().top;
+//   if (bodyTop == 0) {
+//     header.classList.remove("scrollOn");
+//   } else {
+//     header.classList.add("scrollOn");
+//   }
+// }
+
+// function aboutTextAni() {
+//   let flag = false;
+//   const aboutInner = document.querySelector(".about__inner");
+//   let posY = aboutInner.getBoundingClientRect().top;
+//   if (posY < window.innerHeight * 0.2) {
+//   } else {
+//     aboutInner.classList.add("scrollOn");
+//   }
+// }
+
+// document.addEventListener("mousewheel", function (event) {
+//   detectTop(), aboutTextAni();
 // });
+
+// const body = document.querySelector("body");
+// let about = new ScrollMasic.Scene({
+//     triggerElement: ".about",
+//     triggerHook: 0.2,
+//     duration: 500,
+//   })
+//     .setClassToggle("body", "body-white")
+//     .addIndicators(),
+//   works = new ScrollMasic.Scene({
+//     triggerElement: ".works",
+//     triggerHook: 0.2,
+//     duration: 500,
+//   }).setClassToggle("body", "body-beige");
+
+// controller.addScene({ about, works });
 
 // const controller = new ScrollMagic.Controller();
 // const header_tween_logo = TweenMax.to(".js_header_logo", 0.5, {
@@ -269,37 +402,6 @@ tl.to(".visual-text__word", { opacity: 1 });
 //   };
 //window.addEventListener("load", initScroll),
 //window.addEventListener("resize", resizeEvt);
-
-var colorIndex = 0;
-var scrollValue = 0; //get mouse wheel value
-
-function changeSchrolling(e) {
-  //scrollValue += e.deltaY * 0.01;
-  //scrollValue += e.deltaY * 0.01;
-  //console.log(scrollValue);
-  // window.addEventListener("scroll", (e) => {
-  //   console.log(window.screenY);
-  // });
-
-  //위로 Scroll
-  // if (scrollValue > 10) {
-  //   colorIndex += 1;
-  //   if (colorIndex > colors.length - 1) colorIndex = 0;
-  //   color.textContent = colors[colorIndex];
-  //   container.style.backgroundColor = colors[colorIndex]; //배경색 변경
-  //   scrollValue = 0; //스크롤 값 초기화
-  // }
-
-  //아래로 Scroll
-  // if (scrollValue < -10) {
-  //   colorIndex -= 1;
-  //   if (colorIndex < 0) colorIndex = colors.length - 1;
-  //   color.textContent = colors[colorIndex];
-  //   container.style.backgroundColor = colors[colorIndex]; //배경색 변경
-  //   scrollValue = 0; //스크롤 값 초기화
-  // }
-  e.preventDefault(); // disable the actual scrolling
-}
 
 // var getScrollBarWidth = function () {
 //     document.body.style.overflow = "hidden";
