@@ -488,7 +488,7 @@ button {
 
 .about__inner .about-text__item {
   padding-top: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
   word-break: keep-all;
   opacity: 0;
@@ -616,7 +616,7 @@ button {
 
 .skills__inner .skills-list__item {
   position: relative;
-  padding: 0 0 2rem 2rem;
+  padding: 0 0 3.5rem 2rem;
   opacity: 0;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
