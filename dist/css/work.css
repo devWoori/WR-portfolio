@@ -9,6 +9,8 @@
 }
 
 .works__title {
+  position: relative;
+  z-index: 1;
   padding: 2rem 0;
   text-align: center;
   font-size: 3.2rem;
@@ -45,13 +47,10 @@
       writing-mode: vertical-lr;
   font-size: 6.2rem;
   line-height: 1;
-  color: #555555;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(85, 85, 85, 0)), to(rgba(85, 85, 85, 0.85)));
-  background: linear-gradient(90deg, rgba(85, 85, 85, 0), rgba(85, 85, 85, 0.85));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f7f4ef;
   font-weight: 900;
-  z-index: 1;
+  letter-spacing: -0.3rem;
+  z-index: 0;
   opacity: 0;
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);

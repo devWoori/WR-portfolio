@@ -19,6 +19,7 @@
           transform: translateX(-30px);
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
+  z-index: 1;
 }
 
 .about__inner .profile__title {
@@ -151,17 +152,14 @@
       writing-mode: vertical-rl;
   font-size: 6.2rem;
   line-height: 1;
-  color: #555555;
-  background: -webkit-gradient(linear, left top, right top, from(#555555), to(rgba(85, 85, 85, 0)));
-  background: linear-gradient(90deg, #555555, rgba(85, 85, 85, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f1f1f1;
   font-weight: 900;
   opacity: 0;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
+  letter-spacing: -0.3rem;
 }
 
 .about__inner.active .profile {

@@ -33,11 +33,26 @@
     font-weight: 100;
     color: $white-color;
   }
-  &__loader {
-    svg path,
-    svg rect {
-      fill: $white-color;
-    }
+}
+
+.svg_rect {
+  animation: movingStick 1.3s infinite;
+}
+@for $i from 1 through 3 {
+  .svg_rect:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@keyframes movingStick {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

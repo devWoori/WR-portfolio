@@ -15,6 +15,7 @@
       opacity: 0;
       transform: translateX(-30px);
       transition: all 0.6s linear;
+      z-index: 1;
       &__title {
         display: inline-block;
         transform: translate(4rem, 0);
@@ -109,18 +110,12 @@
     writing-mode: vertical-rl;
     font-size: 6.2rem;
     line-height: 1;
-    color: rgba(85, 85, 85, 1);
-    background: linear-gradient(
-      90deg,
-      rgba(85, 85, 85, 1),
-      rgba(85, 85, 85, 0)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f1f1f1;
     font-weight: 900;
     opacity: 0;
     transform: translateY(-30px);
     transition: all 0.6s ease;
+    letter-spacing: -0.3rem;
   }
 
   &__inner.active {
