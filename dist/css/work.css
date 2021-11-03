@@ -108,6 +108,8 @@
   transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+  padding: 0;
+  cursor: pointer;
 }
 
 .works .works-list__item .item__link:hover {

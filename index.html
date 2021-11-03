@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>WR portfolio | 웹 퍼블리셔 포트폴리오</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WR portfolio | 웹 퍼블리셔 포트폴리오</title>
-    <meta name="description" content="WR - 웹 퍼블리셔 포트폴리오" />
+    <meta name="description" content="WR - 웹 퍼블리셔 포트폴리오 | 다양한 경험과 능동적으로 자세로 소통하는 웹퍼블리셔 차우리 입니다." />
     <meta
       name="keywords"
       content="웹 퍼블리셔, 경력 웹 퍼블리셔, 포트폴리오, 웹 퍼블리셔 포트폴리오, UI, UX, WR, woori, 차우리"
     />
     <meta name="Reply-To" content="woori1373@gmail.com" />
-    <meta property="og:site_name" content="WR portfolio" />
     <meta property="og:title" content="WR portfolio" />
-    <meta property="og:description" content="경력 웹 퍼블리셔 포트폴리오" />
     <meta property="og:url" content="https://devwoori.github.io/WR-portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WR portfolio" />
+    <meta property="og:description" content="경력 웹 퍼블리셔 포트폴리오" />
     <meta
       property="og:image"
       content="https://devwoori.github.io/WR-portfolio/src/hotlink/ogImage.png"
@@ -163,7 +164,7 @@
             <div class="about__inner">
               <div class="profile">
                 <h2 class="profile__title">저는 이런 <b>퍼블리셔</b>입니다</h2>
-                <div class="profile__img">
+                <div class="profile__img" aria-label="profile image">
                   <span class="blind">프로필</span>
                 </div>
                 <div class="profile-list">
@@ -229,7 +230,7 @@
                   <strong class="item__name">협업에 대한 이해</strong>
                   <p class="item__detail">
                     디자이너의 1px차이, 개발자의 유지보수성을 고려한 개발에 대해 잘 이해하고 있으며<br/>
-                    이를 고려하여 작업하며 모두와 '함께' 일하는 방법을 생각하고 고민합니다.
+                    이를 고려하여 작업하고 모두와 '함께' 일하는 방법을 생각하고 고민합니다.
                   </p>
                 </li>
                 <li class="skills-list__item">
@@ -257,39 +258,36 @@
               <ul class="works-list">
                 <li class="works-list__item">
                   <a href="https://hoteliv.kr" target="_blank" class="item__link">
-                    <picture>
-                      <source media="(min-width: 700px)" srcset="" />
-                      <source media="(min-width: 400px)" srcset="" />
-                      <img src="./src/images/img_hoteliv_renewal.png" alt="Hoteliv portfolio" />
-                    </picture>
+                    <img src="./src/images/img_hoteliv_renewal.png" alt="Hoteliv Renewal thumbnail" />
                   </a>
                   <p class="item__name">호텔리브 리뉴얼</p>
                   <span class="item__skill">#반응형</span>
                   <span class="item__skill">#SEO</span>
                 </li>
                 <li class="works-list__item">
-                  <a href="https://lovely-spruce-c79.notion.site/d89f20ca75f048fc8fad696fa6f93125" target="_blank" class="item__link">
-                    <img src="./src/images/img_hoteliv.png" alt="Hoteliv portfolio" />
-                  </a>
+                  <button
+                    class="item__link"
+                    onClick="window.open(clickNotion('https://lovely-spruce-c79.notion.site/d89f20ca75f048fc8fad696fa6f93125'))"
+                  >
+                    <img src="./src/images/img_hoteliv.png" alt="Hoteliv thumbnail" />
+                  </button>
                   <p class="item__name">호텔리브</p>
                   <span class="item__skill">#반응형</span>
                   <span class="item__skill">#예약시스템</span>
                 </li>
                 <li class="works-list__item">
-                  <a href="https://lovely-spruce-c79.notion.site/291fb2518e91411383956dcec139abc2" target="_blank" class="item__link">
-                    <img src="./src/images/img_hoteliv_admin.png" alt="Hoteliv portfolio" />
-                  </a>
+                  <button
+                    class="item__link" 
+                    onClick="window.open(clickNotion('https://lovely-spruce-c79.notion.site/291fb2518e91411383956dcec139abc2'))">
+                    <img src="./src/images/img_hoteliv_admin.png" alt="Hoteliv Admin thumbnail" />
+                  </button>
                   <p class="item__name">호텔리브 어드민</p>
                   <span class="item__skill">#어드민</span>
                   <span class="item__skill">#Bootstrap</span>
                 </li>
                 <li class="works-list__item">
                   <a href="https://banggrae.com/map/index" target="_blank" class="item__link">
-                    <picture>
-                      <source media="(min-width: 700px)" srcset="" />
-                      <source media="(min-width: 400px)" srcset="" />
-                      <img src="./src/images/img_banggrae.png" alt="Hoteliv portfolio" />
-                    </picture>
+                    <img src="./src/images/img_banggrae.png" alt="Banggrae thumbnail" />
                   </a>
                   <p class="item__name">방그래</p>
                   <span class="item__skill">#적응형</span>
@@ -297,29 +295,29 @@
                 </li>
                 <li class="works-list__item">
                   <a href="http://eumdesign.eumshop.com/" target="_blank" class="item__link">
-                    <picture>
-                      <source media="(min-width: 700px)" srcset="" />
-                      <source media="(min-width: 400px)" srcset="" />
-                      <img src="./src/images/img_eumshop.png" alt="Hoteliv portfolio" />
-                    </picture>
+                    <img src="./src/images/img_eumshop.png" alt="Eumshop thumbnail" />
                   </a>
                   <p class="item__name">이음샵 쇼핑몰 기본 디자인</p>
                   <span class="item__skill">#적응형</span>
                   <span class="item__skill">#쇼핑몰</span>
                 </li>
                 <li class="works-list__item">
-                  <a href="https://lovely-spruce-c79.notion.site/bbd98075f8ba4f958fa783c9be866e74" target="_blank" class="item__link">
-                      <img src="./src/images/img_selecon.png" alt="Hoteliv portfolio" />
-                    </picture>
-                  </a>
+                  <button
+                    class="item__link"
+                    onClick="window.open(clickNotion('https://lovely-spruce-c79.notion.site/bbd98075f8ba4f958fa783c9be866e74'))"
+                  >
+                    <img src="./src/images/img_selecon.png" alt="Celecon thumbnail" />
+                  </button>
                   <p class="item__name">셀렉온</p>
                   <span class="item__skill">#적응형</span>
                   <span class="item__skill">#쇼핑몰</span>
                 </li>
                 <li class="works-list__item">
-                  <a href="https://lovely-spruce-c79.notion.site/26fb85b21b654e4499477e4efac2115c" target="_blank" class="item__link">
-                    <img src="./src/images/img_fabrixquare.png" alt="Hoteliv portfolio" />
-                  </a>
+                  <button 
+                    class="item__link" 
+                    onClick="window.open(clickNotion('https://lovely-spruce-c79.notion.site/26fb85b21b654e4499477e4efac2115c'))">
+                    <img src="./src/images/img_fabrixquare.png" alt="Fabrixquare thumbnail" />
+                  </button>
                   <p class="item__name">패브릭스퀘어</p>
                   <span class="item__skill">#쇼핑몰</span>
                 </li>

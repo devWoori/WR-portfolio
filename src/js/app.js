@@ -2,11 +2,12 @@
 function clickNotion(url) {
   let urlPrefix = "";
   // IE11, Windows 10일 때 Edge 새창으로 열기
-  if (
-    (document.documentMode === 11) &
-    (navigator.userAgent.indexOf("Windows NT 10.0") > -1)
-  ) {
-    urlPrefix = "microsoft-edge";
+  if (navigator.userAgent.indexOf("Trident") > 0) {
+    alert("노션은 Internet Explorer 에서 지원하지 않아 Edge로 이동합니다!");
+    urlPrefix = "microsoft-edge:";
+  } else if (/MSIE \d |Trident.*rv:/.test(navigator.userAgent)) {
+    alert("노션은 Internet Explorer 에서 지원하지 않아 Edge로 이동합니다!");
+    urlPrefix = "microsoft-edge:http:";
   }
   return urlPrefix + url;
 }
