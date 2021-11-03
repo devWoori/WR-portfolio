@@ -11,16 +11,18 @@
   align-items: center;
   justify-content: center;
   min-height: 640px;
+  background: url("../../src/images/bg_visual.jpg") no-repeat center;
+  background-size: cover;
   &__inner {
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     .visual-text {
-      width: 65%;
+      width: 100%;
       .svg_text {
         width: 100%;
         margin: auto;

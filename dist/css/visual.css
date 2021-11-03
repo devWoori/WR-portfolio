@@ -15,6 +15,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 640px;
+  background: url("../../src/images/bg_visual.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .visual__inner {
@@ -27,12 +29,12 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .visual__inner .visual-text {
-  width: 65%;
+  width: 100%;
 }
 
 .visual__inner .visual-text .svg_text {

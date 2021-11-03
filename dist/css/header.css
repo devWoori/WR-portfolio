@@ -26,6 +26,7 @@
   padding: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .header__logo svg {
